@@ -41,19 +41,13 @@
 
 
 const { Telegraf } = require("telegraf");
-
 const TOKEN = "6139307692:AAH7O14oO-juIsdrnKcle632TmYXfGWkU0k";
-// require("dotenv").config()
-
-
-// const TOKEN=process.env.TOKEN
-// console.log(TOKEN);
 const bot = new Telegraf(TOKEN);
-
 const web_link = "https://6405bea2ada02800084117e0--stellular-narwhal-b3fe08.netlify.app//";
 
+
 bot.start((ctx) =>
-  ctx.reply("Welcome :)", {
+  ctx.reply(`Welcome ${ctx.from.first_name}`, {
     reply_markup: {
       keyboard: [[{ text: "order page", web_app: { url: web_link } }]],
     },
