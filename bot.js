@@ -44,7 +44,7 @@ const bot = new Telegraf(TOKEN);
 const web_link = "https://6405bea2ada02800084117e0--stellular-narwhal-b3fe08.netlify.app//";
 
 bot.start((ctx) =>
-  ctx.reply(`Welcome ${ctx.from.first_name}🙋  Is there anything you want?`, {
+  ctx.reply(`Welcome, ${ctx.from.first_name}🙋!  Is there anything you want?  `, {
     reply_markup: {
       keyboard: [[{ text: "order page", web_app: { url: web_link } }]],
     },
