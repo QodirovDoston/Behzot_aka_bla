@@ -45,12 +45,12 @@ const TOKEN = "6139307692:AAH7O14oO-juIsdrnKcle632TmYXfGWkU0k";
 const bot = new Telegraf(TOKEN);
 const web_link = "https://6405bea2ada02800084117e0--stellular-narwhal-b3fe08.netlify.app//";
 
-
 bot.start((ctx) =>
-  ctx.reply(`Welcome ${ctx.from.first_name}`, {
+ctx.sendSticker('https://chpic.su/_data/stickers/b/BratishkinEmoji/BratishkinEmoji_001.webp'),
+  ctx.reply(`Welcome ${ctx.from.first_name} Is there anything you want?`, {
     reply_markup: {
       keyboard: [[{ text: "order page", web_app: { url: web_link } }]],
     },
   })
-);
+  );
 bot.launch();
